@@ -23,12 +23,12 @@
 // MODULES //
 
 var resolve = require( 'path' ).resolve;
-var readFileSync = require( '@stdlib/fs/read-file' ).sync;
+var readFileSync = require( '@stdlib/fs-read-file' ).sync;
 var CLI = require( '@stdlib/cli' );
-var stdin = require( '@stdlib/process/read-stdin' );
-var stdinStream = require( '@stdlib/streams/node/stdin' );
-var reEOL = require( '@stdlib/regexp/eol' );
-var reFromString = require( '@stdlib/utils/regexp-from-string' );
+var stdin = require( '@stdlib/process-read-stdin' );
+var stdinStream = require( '@stdlib/streams-node-stdin' );
+var reEOL = require( '@stdlib/regexp-eol' );
+var reFromString = require( '@stdlib/utils-regexp-from-string' );
 var fromCodePoint = require( './../lib' );
 
 
