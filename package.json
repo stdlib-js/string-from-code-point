@@ -43,7 +43,7 @@
   "dependencies": {
     "@stdlib/assert-is-collection": "^0.0.x",
     "@stdlib/assert-is-nonnegative-integer": "^0.0.x",
-    "@stdlib/cli": "^0.0.x",
+    "@stdlib/cli-ctor": "^0.0.x",
     "@stdlib/constants-unicode-max": "^0.0.x",
     "@stdlib/constants-unicode-max-bmp": "^0.0.x",
     "@stdlib/fs-read-file": "^0.0.x",
