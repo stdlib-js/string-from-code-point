@@ -225,6 +225,20 @@ abc
 
 <!-- /.references -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/string/code-point-at`][@stdlib/string/code-point-at]: return a Unicode code point from a string at a specified position.
+
+</section>
+
+<!-- /.related -->
+
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 
@@ -293,6 +307,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [mdn-string-fromcodepoint]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 
 [utf-16]: https://en.wikipedia.org/wiki/UTF-16
+
+<!-- <related-links> -->
+
+[@stdlib/string/code-point-at]: https://github.com/stdlib-js/string-code-point-at
+
+<!-- </related-links> -->
 
 </section>
 
