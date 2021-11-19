@@ -20,7 +20,7 @@ limitations under the License.
 
 # fromCodePoint
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Create a string from a sequence of Unicode [code points][code-point].
 
@@ -233,7 +233,7 @@ abc
 
 ## See Also
 
--   [`@stdlib/string/code-point-at`][@stdlib/string/code-point-at]: return a Unicode code point from a string at a specified position.
+-   <span class="package-name">[`@stdlib/string/code-point-at`][@stdlib/string/code-point-at]</span><span class="delimiter">: </span><span class="description">return a Unicode code point from a string at a specified position.</span>
 
 </section>
 
@@ -284,8 +284,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-from-code-point/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/string-from-code-point?branch=main
 
+<!--
+
 [dependencies-image]: https://img.shields.io/david/stdlib-js/string-from-code-point.svg
 [dependencies-url]: https://david-dm.org/stdlib-js/string-from-code-point/main
+
+-->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
 [chat-url]: https://gitter.im/stdlib-js/stdlib/
