@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-from-code-point",
-  "version": "0.0.0",
+  "version": "0.0.8",
   "description": "Create a string from a sequence of Unicode code points.",
   "license": "Apache-2.0",
   "author": {
