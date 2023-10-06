@@ -45,112 +45,25 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
 
-```bash
-npm install @stdlib/string-from-code-point
-```
 
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
--   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
-
-<section class="usage">
-
-## Usage
-
-```javascript
-var fromCodePoint = require( '@stdlib/string-from-code-point' );
-```
-
-#### fromCodePoint( pt1\[, pt2\[, pt3\[, ...]]] )
-
-Creates a `string` from a sequence of Unicode [code points][code-point].
-
-```javascript
-var out = fromCodePoint( 9731 );
-// returns '☃'
-```
-
-In addition to providing [code points][code-point] as separate arguments, the function supports providing an array-like `object` as a single argument containing a sequence of [code points][code-point].
-
-```javascript
-var Uint16Array = require( '@stdlib/array-uint16' );
-
-var out = fromCodePoint( 97, 98, 99 );
-// returns 'abc'
-
-out = fromCodePoint( new Uint16Array( [ 97, 98, 99 ] ) );
-// returns 'abc'
-```
-
-</section>
-
-<!-- /.usage -->
 
 <!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
-<section class="notes">
 
-## Notes
-
--   This function differs from [`String.fromCharCode`][mdn-string-fromcharcode] in the following ways:
-
-    -   The function provides support for all valid Unicode values (up to `21` bits). While most common Unicode values can be represented using one 16-bit unit, higher code point characters require two 16-bit units (a surrogate pair consisting of a high and a low surrogate) to form a single character. [`String.fromCharCode`][mdn-string-fromcharcode] does **not** support surrogate pairs, supporting only UCS-2, a subset of [UTF-16][utf-16].
-
--   This function differs from [`String.fromCodePoint`][mdn-string-fromcodepoint] in the following ways:
-
-    -   The function supports explicitly providing an array-like `object` containing a sequence of [code points][code-point].
-    -   The function requires **at least** one [code point][code-point].
-    -   The function requires that all [code points][code-point] be nonnegative integers. The function does **not** support values, such as `null`, `undefined`, `true`, `false`, `'0'`, `'1'`, etc., which can be cast to integer values.
-
-</section>
-
-<!-- /.notes -->
 
 <!-- Package usage examples. -->
 
-<section class="examples">
 
-## Examples
-
-<!-- eslint no-undef: "error" -->
-
-```javascript
-var randu = require( '@stdlib/random-base-randu' );
-var floor = require( '@stdlib/math-base-special-floor' );
-var UNICODE_MAX_BMP = require( '@stdlib/constants-unicode-max-bmp' );
-var fromCodePoint = require( '@stdlib/string-from-code-point' );
-
-var x;
-var i;
-
-for ( i = 0; i < 100; i++ ) {
-    x = floor( randu()*UNICODE_MAX_BMP );
-    console.log( '%d => %s', x, fromCodePoint( x ) );
-}
-```
-
-</section>
-
-<!-- /.examples -->
 
 <!-- Section for describing a command-line interface. -->
 
-* * *
+
 
 <section class="cli">
 
-## CLI
+
 
 <section class="installation">
 
@@ -168,7 +81,7 @@ npm install -g @stdlib/string-from-code-point-cli
 
 <section class="usage">
 
-### Usage
+## Usage
 
 ```text
 Usage: from-code-point [options] [<code_point> <code_point> ...]
@@ -188,7 +101,7 @@ Options:
 
 <section class="notes">
 
-### Notes
+## Notes
 
 -   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
 
@@ -210,7 +123,7 @@ Options:
 
 <section class="examples">
 
-### Examples
+## Examples
 
 ```bash
 $ from-code-point 9731
@@ -251,10 +164,9 @@ abc
 
 <section class="related">
 
-* * *
-
 ## See Also
 
+-   <span class="package-name">[`@stdlib/string-from-code-point`][@stdlib/string-from-code-point]</span><span class="delimiter">: </span><span class="description">create a string from a sequence of Unicode code points.</span>
 -   <span class="package-name">[`@stdlib/string-code-point-at`][@stdlib/string/code-point-at]</span><span class="delimiter">: </span><span class="description">return a Unicode code point from a string at a specified position.</span>
 
 </section>
@@ -274,7 +186,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-#### Community
+### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -297,8 +209,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/string-from-code-point.svg
-[npm-url]: https://npmjs.org/package/@stdlib/string-from-code-point
+[npm-image]: http://img.shields.io/npm/v/@stdlib/string-from-code-point-cli.svg
+[npm-url]: https://npmjs.org/package/@stdlib/string-from-code-point-cli
 
 [test-image]: https://github.com/stdlib-js/string-from-code-point/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/string-from-code-point/actions/workflows/test.yml?query=branch:main
