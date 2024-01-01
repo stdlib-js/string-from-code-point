@@ -18,6 +18,17 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # fromCodePoint
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
@@ -34,38 +45,31 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-from-code-point
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-fromCodePoint = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var fromCodePoint = require( 'path/to/vendor/umd/string-from-code-point/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.fromCodePoint;
-})();
-</script>
+var fromCodePoint = require( '@stdlib/string-from-code-point' );
 ```
 
 #### fromCodePoint( pt1\[, pt2\[, pt3\[, ...]]] )
@@ -121,16 +125,11 @@ out = fromCodePoint( new Uint16Array( [ 97, 98, 99 ] ) );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-unicode-max-bmp@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var floor = require( '@stdlib/math-base-special-floor' );
+var UNICODE_MAX_BMP = require( '@stdlib/constants-unicode-max-bmp' );
+var fromCodePoint = require( '@stdlib/string-from-code-point' );
 
 var x;
 var i;
@@ -139,11 +138,6 @@ for ( i = 0; i < 100; i++ ) {
     x = floor( randu()*UNICODE_MAX_BMP );
     console.log( '%d => %s', x, fromCodePoint( x ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -152,7 +146,98 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- Section for describing a command-line interface. -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/string-from-code-point-cli
+```
+
+</section>
+<!-- CLI usage documentation. -->
+
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: from-code-point [options] [<code_point> <code_point> ...]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --split sep           Delimiter for stdin data. Default: '/\\r?\\n/'.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+### Notes
+
+-   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
+
+    ```bash
+    # Not escaped...
+    $ echo -n $'97\n98\n99' | from-code-point --split /\r?\n/
+
+    # Escaped...
+    $ echo -n $'97\n98\n99' | from-code-point --split /\\r?\\n/
+    ```
+
+-   The implementation ignores trailing delimiters.
+
+</section>
+
+<!-- /.notes -->
+
+<!-- CLI usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ from-code-point 9731
+☃
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n '9731' | from-code-point
+☃
+```
+
+By default, when used as a [standard stream][standard-streams], the implementation assumes newline-delimited data. To specify an alternative delimiter, set the `split` option.
+
+```bash
+$ echo -n '97\t98\t99\t' | from-code-point --split '\t'
+abc
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -202,7 +287,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -263,7 +348,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/code-point-at]: https://github.com/stdlib-js/string-code-point-at/tree/umd
+[@stdlib/string/code-point-at]: https://github.com/stdlib-js/string-code-point-at
 
 <!-- </related-links> -->
 
