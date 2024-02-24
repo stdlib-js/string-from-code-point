@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import fromCodePoint from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/string-from-code-point/tags). For example,
+
+```javascript
 import fromCodePoint from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@v0.2.1-esm/index.mjs';
 ```
 
@@ -117,7 +122,7 @@ out = fromCodePoint( new Uint16Array( [ 97, 98, 99 ] ) );
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
 import UNICODE_MAX_BMP from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-unicode-max-bmp@esm/index.mjs';
-import fromCodePoint from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@v0.2.1-esm/index.mjs';
+import fromCodePoint from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@esm/index.mjs';
 
 var x;
 var i;
