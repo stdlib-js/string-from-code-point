@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import fromCodePoint from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@esm/index.mjs';
+import fromCodePoint from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@v0.2.1-esm/index.mjs';
 ```
 
 #### fromCodePoint( pt1\[, pt2\[, pt3\[, ...]]] )
@@ -117,7 +117,7 @@ out = fromCodePoint( new Uint16Array( [ 97, 98, 99 ] ) );
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
 import UNICODE_MAX_BMP from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-unicode-max-bmp@esm/index.mjs';
-import fromCodePoint from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@esm/index.mjs';
+import fromCodePoint from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@v0.2.1-esm/index.mjs';
 
 var x;
 var i;
