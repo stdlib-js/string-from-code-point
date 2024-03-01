@@ -302,8 +302,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/string-from-code-point.svg
 [npm-url]: https://npmjs.org/package/@stdlib/string-from-code-point
 
-[test-image]: https://github.com/stdlib-js/string-from-code-point/actions/workflows/test.yml/badge.svg?branch=v0.2.1
-[test-url]: https://github.com/stdlib-js/string-from-code-point/actions/workflows/test.yml?query=branch:v0.2.1
+[test-image]: https://github.com/stdlib-js/string-from-code-point/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/string-from-code-point/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-from-code-point/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/string-from-code-point?branch=main
