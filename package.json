@@ -40,7 +40,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/assert-is-collection": "^0.2.1",
+    "@stdlib/assert-is-collection": "^0.2.2",
     "@stdlib/assert-is-nonnegative-integer": "^0.2.2",
     "@stdlib/cli-ctor": "^0.2.2",
     "@stdlib/constants-unicode-max": "^0.2.2",
@@ -61,7 +61,7 @@
     "@stdlib/assert-is-string": "^0.2.2",
     "@stdlib/assert-is-windows": "^0.2.2",
     "@stdlib/math-base-special-floor": "^0.2.3",
-    "@stdlib/math-base-special-pow": "^0.2.1",
+    "@stdlib/math-base-special-pow": "^0.3.0",
     "@stdlib/process-exec-path": "^0.2.2",
     "@stdlib/random-base-randu": "^0.2.1",
     "@stdlib/string-replace": "^0.2.2",
@@ -69,7 +69,7 @@
     "proxyquire": "^2.0.0",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
-    "@stdlib/bench-harness": "^0.2.1"
+    "@stdlib/bench-harness": "^0.2.2"
   },
   "engines": {
     "node": ">=0.10.0",
