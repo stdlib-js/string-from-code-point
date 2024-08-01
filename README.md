@@ -45,33 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/string-from-code-point
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
--   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var fromCodePoint = require( '@stdlib/string-from-code-point' );
+import fromCodePoint from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@esm/index.mjs';
 ```
 
 #### fromCodePoint( pt1\[, pt2\[, pt3\[, ...]]] )
@@ -86,7 +67,7 @@ var out = fromCodePoint( 9731 );
 In addition to providing [code points][code-point] as separate arguments, the function supports providing an array-like `object` as a single argument containing a sequence of [code points][code-point].
 
 ```javascript
-var Uint16Array = require( '@stdlib/array-uint16' );
+import Uint16Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint16@esm/index.mjs';
 
 var out = fromCodePoint( 97, 98, 99 );
 // returns 'abc'
@@ -127,11 +108,16 @@ out = fromCodePoint( new Uint16Array( [ 97, 98, 99 ] ) );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var randu = require( '@stdlib/random-base-randu' );
-var floor = require( '@stdlib/math-base-special-floor' );
-var UNICODE_MAX_BMP = require( '@stdlib/constants-unicode-max-bmp' );
-var fromCodePoint = require( '@stdlib/string-from-code-point' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
+import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+import UNICODE_MAX_BMP from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-unicode-max-bmp@esm/index.mjs';
+import fromCodePoint from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-from-code-point@esm/index.mjs';
 
 var x;
 var i;
@@ -140,6 +126,10 @@ for ( i = 0; i < 100; i++ ) {
     x = floor( randu()*UNICODE_MAX_BMP );
     console.log( '%d => %s', x, fromCodePoint( x ) );
 }
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -148,98 +138,7 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- Section for describing a command-line interface. -->
 
-* * *
 
-<section class="cli">
-
-## CLI
-
-<section class="installation">
-
-## Installation
-
-To use as a general utility, install the CLI package globally
-
-```bash
-npm install -g @stdlib/string-from-code-point-cli
-```
-
-</section>
-<!-- CLI usage documentation. -->
-
-
-<section class="usage">
-
-### Usage
-
-```text
-Usage: from-code-point [options] [<code_point> <code_point> ...]
-
-Options:
-
-  -h,    --help                Print this message.
-  -V,    --version             Print the package version.
-         --split sep           Delimiter for stdin data. Default: '/\\r?\\n/'.
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-### Notes
-
--   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
-
-    ```bash
-    # Not escaped...
-    $ echo -n $'97\n98\n99' | from-code-point --split /\r?\n/
-
-    # Escaped...
-    $ echo -n $'97\n98\n99' | from-code-point --split /\\r?\\n/
-    ```
-
--   The implementation ignores trailing delimiters.
-
-</section>
-
-<!-- /.notes -->
-
-<!-- CLI usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```bash
-$ from-code-point 9731
-☃
-```
-
-To use as a [standard stream][standard-streams],
-
-```bash
-$ echo -n '9731' | from-code-point
-☃
-```
-
-By default, when used as a [standard stream][standard-streams], the implementation assumes newline-delimited data. To specify an alternative delimiter, set the `split` option.
-
-```bash
-$ echo -n '97\t98\t99\t' | from-code-point --split '\t'
-abc
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -272,7 +171,7 @@ abc
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -353,7 +252,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/code-point-at]: https://github.com/stdlib-js/string-code-point-at
+[@stdlib/string/code-point-at]: https://github.com/stdlib-js/string-code-point-at/tree/esm
 
 <!-- </related-links> -->
 
